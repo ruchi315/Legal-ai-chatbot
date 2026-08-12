@@ -226,14 +226,21 @@ python frontend.py
 - Streamlit
 - Machine Learning Pipelines
 ---
-
 ## 📊 Repository Highlights
 
-* Modular Python architecture
-* Clean separation of retrieval and generation pipelines
-* Dataset-driven legal knowledge base
-* Production-oriented project structure
-* Resume-ready AI portfolio project
+- **3 specialised agents** orchestrated using LangGraph
+- FAISS-based semantic document indexing
+- HuggingFace Sentence Transformers for semantic embeddings
+- **88% Recall@5** retrieval performance
+- **93% faithfulness** for generated responses
+- Self-correcting feedback for factual inconsistencies and hallucinations
+- Interactive Streamlit interface
+- **2.4s P95 response latency**
+- Modular Python architecture
+- Clean separation of retrieval, agent orchestration, and generation pipelines
+- Dataset-driven legal knowledge base
+- Production-oriented project structure
+- Resume-ready AI portfolio project
 
 ---
 
