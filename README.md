@@ -21,77 +21,107 @@ The project demonstrates the practical implementation of Retrieval-Augmented Gen
 
 ## ✨ Features
 
-* AI-powered legal clause interpretation
-* Retrieval-Augmented Generation (RAG)
-* Semantic search using vector embeddings
-* Constitution-based Question Answering
-* PDF document knowledge base
-* Fine-tuning pipeline
-* Context-aware legal explanations
-* Fast retrieval using vector databases
-* Modular and extensible architecture
-* Interactive frontend for user queries
-
+- AI-powered legal clause interpretation
+- Retrieval-Augmented Generation (RAG)
+- Semantic search using vector embeddings
+- Constitution-based Question Answering
+- PDF document knowledge base
+- Fine-tuning pipeline
+- Context-aware legal explanations
+- Fast retrieval using FAISS
+- Multi-agent research and fact-checking using LangGraph
+- Researcher, Writer, and Critic agent architecture
+- Self-correcting feedback for factual inconsistencies and hallucinations
+- Interactive Streamlit frontend for user queries
 ---
 
 ## 🏗️ System Architecture
 
 ```text
-                User Query
-                     │
-                     ▼
-          Query Preprocessing
-                     │
-                     ▼
-          Vector Embedding Generation
-                     │
-                     ▼
-          Semantic Similarity Search
-                     │
-                     ▼
-     Relevant Legal Documents Retrieved
-                     │
-                     ▼
-      Retrieval-Augmented Generation
-                     │
-                     ▼
-      AI-Generated Legal Interpretation
-```
-
+                         User Query
+                              │
+                              ▼
+                    Query Preprocessing
+                              │
+                              ▼
+                  Vector Embedding Generation
+                              │
+                              ▼
+                    FAISS Semantic Search
+                              │
+                              ▼
+                  Relevant Legal Context
+                              │
+                              ▼
+                 ┌────────────────────────┐
+                 │     Researcher Agent   │
+                 └────────────┬───────────┘
+                              │
+                              ▼
+                 ┌────────────────────────┐
+                 │       Writer Agent     │
+                 └────────────┬───────────┘
+                              │
+                              ▼
+                 ┌────────────────────────┐
+                 │       Critic Agent     │
+                 └────────────┬───────────┘
+                              │
+                              ▼
+                 Self-Correcting Feedback
+                              │
+                              ▼
+                   Grounded Legal Response
+                              │
+                              ▼
+                     Streamlit Interface
 ---
 
+
+### 3. Replace the `Tech Stack` section with:
+
+```markdown
 ## 🚀 Tech Stack
 
 ### Programming Language
 
-* Python
+- Python
 
 ### Artificial Intelligence
 
-* Large Language Models (LLMs)
-* Retrieval-Augmented Generation (RAG)
-* Prompt Engineering
-* Semantic Search
+- Large Language Models (LLMs)
+- Retrieval-Augmented Generation (RAG)
+- Prompt Engineering
+- Semantic Search
+- Multi-Agent AI
 
 ### Machine Learning
 
-* Embedding Models
-* Fine-Tuning Pipeline
-* Vector Similarity Search
+- HuggingFace Sentence Transformers
+- Embedding Models
+- Fine-Tuning Pipeline
+- Vector Similarity Search
 
-### Database
+### Agent Orchestration
 
-* Vector Database
-* JSON Knowledge Base
+- LangGraph
+- Researcher Agent
+- Writer Agent
+- Critic Agent
+
+### Vector Database / Search
+
+- FAISS
+- JSON Knowledge Base
 
 ### Frontend
 
-* Python-based Interactive Interface
+- Streamlit
 
 ### Development Tools
 
-* Git
-* GitHub
+- Git
+- GitHub
 
 ---
 
@@ -114,13 +144,17 @@ Legal-Clause-AI/
 
 ## ⚙️ Workflow
 
-1. User enters a legal query.
-2. The query is converted into vector embeddings.
-3. Similar legal documents are retrieved from the vector database.
-4. Retrieved context is passed to the language model.
-5. The model generates an accurate and context-aware legal explanation.
-6. The final response is displayed to the user.
-
+1. User enters a legal query through the Streamlit interface.
+2. The query is converted into vector embeddings using HuggingFace Sentence
+   Transformers.
+3. FAISS performs semantic similarity search to retrieve relevant legal
+   context.
+4. The **Researcher Agent** analyses the retrieved information.
+5. The **Writer Agent** generates a context-aware legal explanation.
+6. The **Critic Agent** evaluates the response for factual inconsistencies
+   and hallucinations.
+7. Self-correcting feedback is used when issues are detected.
+8. The final grounded response is displayed through the Streamlit interface.
 ---
 
 ## 🎯 Applications
@@ -178,16 +212,19 @@ python frontend.py
 
 ## 🧠 Skills Demonstrated
 
-* Retrieval-Augmented Generation (RAG)
-* Large Language Models (LLMs)
-* Vector Databases
-* Semantic Search
-* Prompt Engineering
-* AI Application Development
-* Information Retrieval
-* Python Development
-* Machine Learning Pipelines
-
+- Retrieval-Augmented Generation (RAG)
+- Large Language Models (LLMs)
+- Multi-Agent AI Systems
+- LangGraph
+- FAISS
+- HuggingFace Sentence Transformers
+- Vector Databases
+- Semantic Search
+- Prompt Engineering
+- Information Retrieval
+- Python Development
+- Streamlit
+- Machine Learning Pipelines
 ---
 
 ## 📊 Repository Highlights
